@@ -1,17 +1,22 @@
-# Exporting PDF files with Spring and Thymeleaf
+# Read/Write PDF files with Spring and Thymeleaf
 
 Working with **PDF** files is a frequently used feature in a software application.
+This project provides a practical example based on **Spring** and **Thymeleaf** for generating and reading PDF files.
 
 ## Overview
 
-[Model–view–controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) (MVC) is a software design pattern commonly used for developing user interfaces that divide the related program logic into three interconnected elements:
+In common business scenarios, you need to report using PDF Files.
+Instead of building a PDF file from scratch, this project demonstrates how to use HTML with a template engine.
+It is required a previous knowledge in [Spring](https://spring.io/), [Thymeleaf](https://www.thymeleaf.org/) and [Model–View–Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller).
+
+Model–View–Controller (MVC) is a software design pattern commonly used for developing user interfaces that divide the related program logic into three interconnected elements:
 
 - The **Model** encapsulates the application data and in general they will consist of POJO.
 - The **View** is responsible for rendering the model data and in general it generates HTML output that the client's browser can interpret.
 - The **Controller** is responsible for processing user requests and building an appropriate model and passes it to the view for rendering.
 
-[Spring](https://spring.io/) implements MVC with the front controller pattern using its DispatcherServlet.
-[Thymeleaf](https://www.thymeleaf.org/) offers a set of Spring integrations that allow you to use it as a fully-featured substitute for JSP in Spring MVC applications.
+Thymeleaf offers a set of Spring integrations that allow you to use it as a fully-featured substitute for JSP in Spring MVC applications.
+You should keep in mind that Thymeleaf is completely decoupled from PDF generator libraries, meaning that you can use any other template engine for creating PDFs.
 
 ## Project structure
 
@@ -87,6 +92,8 @@ For further reference, please consider the following articles:
 - [Spring Web](https://docs.spring.io/spring-boot/docs/2.6.2/reference/htmlsingle/#boot-features-developing-web-applications)
 - [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
 - [Thymeleaf](https://docs.spring.io/spring-boot/docs/2.6.2/reference/htmlsingle/#boot-features-spring-mvc-template-engines)
+- [Generating PDF Files Using Thymeleaf](https://www.baeldung.com/thymeleaf-generate-pdf)
+- [PDF Conversions in Java](https://www.baeldung.com/pdf-conversions-java)
 - [Spring Boot File Upload / Download Rest API](https://www.callicoder.com/spring-boot-file-upload-download-rest-api-example/)
 - [Testing a Spring Multipart POST Request](https://www.baeldung.com/spring-multipart-post-request-test)
 - [Mockito Tutorial](https://www.baeldung.com/mockito-series)
