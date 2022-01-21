@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Spring App</title>
+    </head>
+    <body style="padding: 40px;">
+        <h1>List of Products</h1>
+        <table th:if="${products.size() > 0}" style="width: 100%; text-align: left;">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                    <th>Price</th>
+                    <th>Currency</th>
+                    <th>Expiration Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product : ${products}">
+                    <td th:text="${product.id}"></td>
+                    <td th:text="${product.name}"></td>
+                    <td th:text="${product.quantity}"></td>
+                    <td th:text="${product.unit}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td th:text="${product.currency}"></td>
+                    <td th:text="${product.expirationDate}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p th:if="${products.size() == 0}">No products available!</p>
+    </body>
+</html>
