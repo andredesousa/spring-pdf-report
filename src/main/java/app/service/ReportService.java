@@ -27,7 +27,7 @@ public class ReportService {
      */
     public ITextRenderer write(List<Product> products) {
         Context context = new Context(Locale.ENGLISH, Map.of("products", products));
-        String html = templateEngine.process("index", context);
+        String html = templateEngine.process("report", context);
         ITextRenderer renderer = new ITextRenderer();
         renderer.setDocumentFromString(html);
         renderer.layout();
@@ -47,8 +47,6 @@ public class ReportService {
         for (int i = 1; i <= reader.getNumberOfPages(); i++) {
             textFromPages.add(PdfTextExtractor.getTextFromPage(reader, i));
         }
-
-        reader.close();
 
         return textFromPages;
     }
